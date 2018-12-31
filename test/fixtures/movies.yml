@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  classification_age: 1
+  synopsis: MyText
+  ticket_price: 1.5
+  catalog_image: MyString
+
+two:
+  name: MyString
+  classification_age: 1
+  synopsis: MyText
+  ticket_price: 1.5
+  catalog_image: MyString

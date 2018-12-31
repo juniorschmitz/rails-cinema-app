@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @movie.name %>
+</p>
+
+<p>
+  <strong>Idade indicada:</strong>
+  <%= @movie.classification_age %>
+</p>
+
+<p>
+  <strong>Sinópse:</strong>
+  <%= @movie.synopsis %>
+</p>
+
+<p>
+  <strong>Preço do ingresso:</strong>
+  <%= @movie.ticket_price %>
+</p>
+
+<p>
+  <strong>Imagem do catálogo:</strong>
+  <%= @movie.catalog_image %>
+</p>
+
+<%= link_to 'Editar', edit_movie_path(@movie) %> |
+<%= link_to 'Voltar', movies_path %>
