@@ -1,24 +1,13 @@
-# README
+# Rails Cinema App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Project created usuing ruby on rails (For rails features testing only):
 
-Things you may want to cover:
+* Ruby : 2.3.3
 
-* Ruby version
+* Not using node_modules, using librarys like JQuery and Bootstrap direct from the Gemfile
 
-* System dependencies
+* Using default SQLite db
 
-* Configuration
+* Tests still under implementation
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* This is a kick-off project, pushed into Github for tests purpose using Gemfile for getting all necessary modules.
