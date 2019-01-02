@@ -1,5 +1,12 @@
 {
   "name": "cinema",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/juniorschmitz/rails-cinema-app.git",
+  "author": "juniorschmitz <juniorschmitz9@gmail.com>",
+  "license": "MIT"
 }
