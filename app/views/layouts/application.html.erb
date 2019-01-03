@@ -6,7 +6,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag    'scaffolds', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <!-- <%= stylesheet_link_tag    'scaffolds', media: 'all', 'data-turbolinks-track': 'reload' %> -->
     <%= stylesheet_link_tag    params[:controller], media: 'all', 'data-turbolinks-track': 'reload' %>
     
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -14,8 +14,24 @@
   </head>
 
   <body>
-    <h1>Header</h1>
+  <header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-light border-bottom shadow-sm">
+   <%= image_tag "potato-logo.png", :class => "card-img-right flex-auto d-none d-lg-block", :style => "width: 100px; height: 100px;" %>
+   <h5 class="my-0 mr-md-auto font-weight-normal">Cinema Potatos</h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+      <div class="p-2 text-dark"><%= link_to "Cadastro de filmes", movies_path %></div>
+    </nav>
+    <a class="btn btn-outline-primary">Te loga tchê!</a>
+  </header>
+
+
     <%= yield %>
-    <h1>Footer</h1>
+  
+  
+    <footer class="footer bg-light">
+      <div class="container">
+        <a href="https://github.com/juniorschmitz">Jacques Schmitz Junior</a>
+        <span class="font-italic">Lorem ipsum sit dolor amet lero lero harry potter </span>
+      </div>
+    </footer>
   </body>
 </html>

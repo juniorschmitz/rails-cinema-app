@@ -18,4 +18,9 @@ Rails.application.config.assets.precompile += %w( cable.js
 
 Rails.application.config.assets.precompile += %w( movies.css
                                                 scaffolds.css
-                                                welcome.css )
+                                                welcome.css
+                                                sticky_footer.css )
+
+Rails.application.config.assets.precompile += %w( netflix-logo.jpg 
+                                                popcorn.jpg 
+                                                potato-logo.png )                                                
