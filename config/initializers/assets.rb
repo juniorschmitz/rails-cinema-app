@@ -14,12 +14,14 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 Rails.application.config.assets.precompile += %w( cable.js 
                                                 movies.js
-                                                welcome.js )
+                                                welcome.js
+                                                devise/sessions.js )
 
 Rails.application.config.assets.precompile += %w( movies.css
                                                 scaffolds.css
                                                 welcome.css
-                                                sticky_footer.css )
+                                                sticky_footer.css
+                                                devise/sessions.css )
 
 Rails.application.config.assets.precompile += %w( netflix-logo.jpg 
                                                 popcorn.jpg 

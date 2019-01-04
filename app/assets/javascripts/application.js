@@ -13,6 +13,6 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require jquery
-//= require propper/index
-//= require bootstrap/dist/js/bootstrap
+// require jquery
+// require propper/index
+// require bootstrap/dist/js/bootstrap
