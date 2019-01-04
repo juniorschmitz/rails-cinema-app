@@ -21,6 +21,7 @@ Rails.application.config.assets.precompile += %w( movies.css
                                                 scaffolds.css
                                                 welcome.css
                                                 sticky_footer.css
+                                                signin.css
                                                 devise/sessions.css )
 
 Rails.application.config.assets.precompile += %w( netflix-logo.jpg 
