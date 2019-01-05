@@ -49,10 +49,17 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
+  gem 'site_prism', '~> 2.15.1'
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
+  gem 'rspec'
   # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'chromedriver-helper'
+  # # gem 'chromedriver-helper'
+
+
+  gem 'cucumber-rails', require: false
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

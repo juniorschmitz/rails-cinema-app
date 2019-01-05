@@ -23,7 +23,7 @@
   </head>
 
   <body>
-  <header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-light border-bottom shadow-sm">
+  <header id="header" class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-light border-bottom shadow-sm">
    
    <%= link_to welcome_index_path do %>
       <%= image_tag "potato-logo.png", :class => "card-img-right flex-auto d-none d-lg-block", :style => "width: 100px; height: 100px;" %>
@@ -34,9 +34,9 @@
       <nav class="my-2 my-md-0 mr-md-3">
         <div class="p-2 text-dark"><%= link_to "Cadastro de filmes", movies_path %></div>
       </nav>
-      <%= link_to "Deslogar", destroy_user_session_path, method: :delete, class: "btn btn-outline-primary" %>
+      <%= link_to "Deslogar", destroy_user_session_path, method: :delete, class: "btn btn-outline-primary btn-logout" %>
     <% else %>
-      <%= link_to "Te loga tchê!", new_user_session_path, class: "btn btn-outline-primary" %>
+      <%= link_to "Te loga tchê!", new_user_session_path, class: "btn btn-outline-primary btn-login" %>
     <% end %>
   </header>
 
@@ -44,7 +44,7 @@
     <%= yield %>
   
   
-    <footer class="footer bg-light">
+    <footer id="footer" class="footer bg-light">
       <div class="container">
         <a href="https://github.com/juniorschmitz">Jacques Schmitz Junior</a>
         <span class="font-italic">Lorem ipsum sit dolor amet lero lero harry potter </span>

@@ -1,7 +1,7 @@
-<%= form_with(model: movie, local: true) do |form| %>
+<%= form_with(model: movie, local: true, html:  { class: "form-group" }) do |form| %>
   <% if movie.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(movie.errors.count, "error") %> prohibited this movie from being saved:</h2>
+      <h2><%= pluralize(movie.errors.count, "error") %> num deu:</h2>
 
       <ul>
       <% movie.errors.full_messages.each do |message| %>
@@ -13,30 +13,30 @@
 
   <div class="field">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :classification_age %>
-    <%= form.number_field :classification_age %>
+    <%= form.number_field :classification_age, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :synopsis %>
-    <%= form.text_area :synopsis %>
+    <%= form.text_area :synopsis, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :ticket_price %>
-    <%= form.text_field :ticket_price %>
+    <%= form.text_field :ticket_price, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :catalog_image %>
-    <%= form.text_field :catalog_image %>
+    <%= form.text_field :catalog_image, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Adicionar filme", class: "btn btn-lg btn-primary btn-block btn-submit"  %>
   </div>
 <% end %>

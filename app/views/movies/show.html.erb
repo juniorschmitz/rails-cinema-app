@@ -1,29 +1,41 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Nome:</strong>
-  <%= @movie.name %>
-</p>
+<ul class="list-group">
+  <li class="list-group-item">
+    <p>
+      <strong>Nome:</strong>
+      <%= @movie.name %>
+    </p>
+  </li>
 
-<p>
-  <strong>Idade indicada:</strong>
-  <%= @movie.classification_age %>
-</p>
+  <li class="list-group-item">
+    <p>
+      <strong>Idade indicada:</strong>
+      <%= @movie.classification_age %>
+    </p>
+  </li>
 
-<p>
-  <strong>Sinópse:</strong>
-  <%= @movie.synopsis %>
-</p>
+  <li class="list-group-item">
+    <p>
+      <strong>Sinópse:</strong>
+      <%= @movie.synopsis %>
+    </p>
+  </li>
 
-<p>
-  <strong>Preço do ingresso:</strong>
-  <%= @movie.ticket_price %>
-</p>
+  <li class="list-group-item">
+    <p>
+      <strong>Preço do ingresso:</strong>
+      <%= @movie.ticket_price %>
+    </p>
+  </li>
 
-<p>
-  <strong>Imagem do catálogo:</strong>
-  <%= @movie.catalog_image %>
-</p>
+  <li class="list-group-item">
+    <p>
+      <strong>Imagem do catálogo:</strong>
+      <%= @movie.catalog_image %>
+    </p>
+  </li>
+</ul>
 
-<%= link_to 'Editar', edit_movie_path(@movie) %> |
-<%= link_to 'Voltar', movies_path %>
+<%= link_to 'Editar', edit_movie_path(@movie), class: "btn btn-primary" %> |
+<%= link_to 'Voltar', movies_path, class: "btn btn-primary" %>

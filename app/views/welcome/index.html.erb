@@ -2,8 +2,10 @@
 
 <div class="nav-scroller py-1 mb-2">
     <nav class="nav d-flex justify-content-between">
-        <p><strong>Hoje é </strong> <%= date_to_br Date.today %></p>
-        <p>Ambiente atual: <strong><%= actual_environment %></strong></p>
+        <% unless actual_environment == 'production' %>
+            <p><strong>Hoje é </strong> <%= date_to_br Date.today %></p>
+            <p>Ambiente atual: <strong><%= actual_environment %></strong></p>
+        <% end %>
     </nav>
 </div>
 
@@ -18,30 +20,30 @@
 <div class="row mb-2">
     <div class="col-md-6">
         <div class="card flex-md-row mb-4 shadow-sm h-md-250">
-        <div class="card-body d-flex flex-column align-items-start">
-            <strong class="d-inline-block mb-2 text-primary">Hello World! Netflix</strong>
-            <h3 class="mb-0">
-            <a class="text-dark" href="#">Lançamentos do Netflix</a>
-            </h3>
-            <div class="mb-1 text-muted"><%= date_to_br Date.today %></div>
-            <p class="card-text mb-auto">Lista de lançamentos de novos filmes e séries no Netflix no mês atual.</p>
-            <a href="#">Confere aí</a>
-        </div>
-        <%= image_tag "netflix-logo.jpg", :class => "card-img-right flex-auto d-none d-lg-block", :style => "width: 200px; height: 250px;" %>
+            <div class="card-body d-flex flex-column align-items-start">
+                <strong class="d-inline-block mb-2 text-primary">Hello World! Netflix</strong>
+                <h3 class="mb-0">
+                <a class="text-dark" href="#">Lançamentos do Netflix</a>
+                </h3>
+                <div class="mb-1 text-muted"><%= date_to_br Date.today %></div>
+                <p class="card-text mb-auto">Lista de lançamentos de novos filmes e séries no Netflix no mês atual.</p>
+                <a href="#">Confere aí</a>
+            </div>
+            <%= image_tag "netflix-logo.jpg", :class => "card-img-right flex-auto d-none d-lg-block", :style => "width: 200px; height: 250px;" %>
         </div>
     </div>
     <div class="col-md-6">
         <div class="card flex-md-row mb-4 shadow-sm h-md-250">
-        <div class="card-body d-flex flex-column align-items-start">
-            <strong class="d-inline-block mb-2 text-success">Melhores lançamentos</strong>
-            <h3 class="mb-0">
-            <a class="text-dark" href="#">Saindo do forno</a>
-            </h3>
-            <div class="mb-1 text-muted">Neste app</div>
-            <p class="card-text mb-auto">Lançamentos cadastrados em nosso sistema e melhores avaliados por nossos usuários.</p>
-            <a href="#">Confere aí</a>
-        </div>
-        <%= image_tag "popcorn.jpg", :class => "card-img-right flex-auto d-none d-lg-block", :style => "width: 200px; height: 250px;" %>
+            <div class="card-body d-flex flex-column align-items-start">
+                <strong class="d-inline-block mb-2 text-success">Melhores lançamentos</strong>
+                <h3 class="mb-0">
+                <a class="text-dark" href="#">Saindo do forno</a>
+                </h3>
+                <div class="mb-1 text-muted">Neste app</div>
+                <p class="card-text mb-auto">Lançamentos cadastrados em nosso sistema e melhores avaliados por nossos usuários.</p>
+                <a href="#">Confere aí</a>
+            </div>
+            <%= image_tag "popcorn.jpg", :class => "card-img-right flex-auto d-none d-lg-block", :style => "width: 200px; height: 250px;" %>
         </div>
     </div>
-    </div>
+</div>
