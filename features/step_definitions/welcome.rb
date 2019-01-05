@@ -1,4 +1,4 @@
-Quando(/^Eu for para a home page$/) do
+Dado(/^que estou na home page$/) do
   visit root_path
 end
 
@@ -16,20 +16,4 @@ end
 
 Então(/^deverá existir um botão de login$/) do
   expect(page).to have_selector '.btn-login'
-end
-
-E(/^clicar no botão de login$/) do
-  page.find(:css, '.btn-login').click
-end
-
-E(/^logar com o usuário (.+) e senha (.+)$/) do |email, password|
-  # page.find(:css, "#user_email").set email
-  fill_in('user_email', with: email)
-  # page.find(:css, "#user_password").set password
-  fill_in('user_password', with: password)
-  page.find(:css, '.btn-submit').click
-end
-
-Então(/^deve aparecer um botão para deslogar na home$/) do
-  expect(page).to have_selector '.btn-logout'
 end
