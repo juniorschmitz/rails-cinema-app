@@ -30,4 +30,4 @@ ADD . /potato
 RUN bundle install
 
 
-CMD bundle exec rails s
+# CMD bundle exec rails s
