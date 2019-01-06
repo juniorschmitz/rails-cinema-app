@@ -5,8 +5,8 @@ pipeline {
     stage ('testing') { 
       steps {
         sh "ls"
-        dir ('potato/config') {
-          sh "bundle exec cucumber -p default"
+        dir ('potato') {
+          sh "bundle exec cucumber -p default -t@all_app"
         }
       }
     }
