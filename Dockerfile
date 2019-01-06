@@ -3,7 +3,7 @@ FROM ruby:2.3.3
 MAINTAINER <jacques.schmitz@compasso.com.br>
 
 RUN apt-get update -qq \
-  && apt-get install -y \
+  && apt-get install -y apt-transport-https \
     # Needed for certain gems
     build-essential \
     # Needed for postgres gem
