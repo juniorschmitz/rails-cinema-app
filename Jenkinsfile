@@ -6,7 +6,7 @@ pipeline {
       steps {
         sh "ls"
         dir ('potato') {
-          sh "bundle exec cucumber -p default -t@all_app"
+          sh "rake cucumber"
         }
       }
     }
