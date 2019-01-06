@@ -9,7 +9,7 @@ RUN apt-get update -qq \
     # Needed for postgres gem
     libpq-dev \
     # Needed for asset compilation
-    nodejs \
+    nodejs
   #   # The following are used to trim down the size of the image by removing unneeded data
   # && apt-get clean autoclean \
   # && apt-get autoremove -y \
