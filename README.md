@@ -2,7 +2,7 @@
 
 Project created usuing ruby on rails (For rails features testing only):
 
-* Ruby : 2.3.3
+* Ruby : 2.4.5
 
 * Not using node_modules, using librarys like JQuery and Bootstrap direct from the Gemfile
 
