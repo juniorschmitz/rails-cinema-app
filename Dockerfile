@@ -22,6 +22,24 @@ RUN apt-get update -qq \
 # Create a directory for our application
 # and set it as the working directory
 
+
+#                          #
+# MISSING PACKAGES FOR TESTS
+#                          #
+
+# Install dependencies
+RUN apt-get -yqq update && \
+    apt-get -yqq --no-install-recommends install curl unzip wget && \
+    apt-get -yqq --no-install-recommends install xvfb tinywm xauth && \
+    apt-get -yqq --no-install-recommends install gnupg software-properties-common && \
+    apt-get -yqq --no-install-recommends install ca-certificates && \
+    ##chrome dependencies - necessário para instalar versões mais antigas do chrome
+    apt-get -yqq --no-install-recommends install fonts-liberation libappindicator1 libasound2 libnss3 && \
+    apt-get -yqq --no-install-recommends install libatk-bridge2.0-0 libatk1.0-0 libcups2 libgtk-3-0 libnspr4 && \
+    apt-get -yqq --no-install-recommends install libxss1 libxtst6 xdg-utils && \
+    update-ca-certificates && \
+    rm -rf /var/lib/apt/lists/*
+
 #Chrome browser to run the tests
 ARG CHROME_VERSION=65.0.3325.181
 RUN wget https://www.slimjet.com/chrome/download-chrome.php?file=lnx%2Fchrome64_$CHROME_VERSION.deb \
