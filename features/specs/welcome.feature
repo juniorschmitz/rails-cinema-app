@@ -26,3 +26,8 @@ Funcionalidade: Home page
   @botao_login_home
   Cenário: Opção de login na página inicial
     Então deverá existir um botão de login
+
+  @acessar_pagina_movies_usuario_deslogado
+  Cenário: Acessar a página de edição e cadastro de filmes com usuário deslogado
+    Quando acessar a página de edição de filmes diretamenta pela url
+    Então deverá aparecer a tela de login de usuário
