@@ -5,7 +5,7 @@ pipeline {
     stage ('testing') { 
       steps {
         sh "ls"
-        dir ('potato') {
+        dir ('potato/config') {
           sh "bundle exec cucumber -p default"
         }
       }
