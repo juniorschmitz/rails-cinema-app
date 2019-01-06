@@ -6,6 +6,7 @@ pipeline {
       steps {
         sh "ls"
         dir ('potato') {
+          sh "rails db:migrate RAILS_ENV=test"
           sh "rake cucumber"
         }
       }
